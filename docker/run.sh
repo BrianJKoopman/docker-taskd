@@ -20,7 +20,7 @@ if ! test -e ${TASKDDATA}/config; then
   cp /usr/share/taskd/pki/generate* ${TASKDDATA}/pki
   cp /usr/share/taskd/pki/vars ${TASKDDATA}/pki
   cd ${TASKDDATA}/pki
-  echo "CN=$(hostname -f)" >> ${TASKDDATA}/pki/vars
+  echo "CN=${CERTHOST}" >> ${TASKDDATA}/pki/vars
   ./generate
   cd /
 

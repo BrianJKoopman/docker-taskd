@@ -1,0 +1,11 @@
+version: '3'
+services:
+  taskd:
+    image: taskd
+    restart: always
+    ports:
+      - 53589:53589
+    environment:
+      - CERTHOST=${DOMAIN}
+    volumes:
+      - "/srv/taskd:/var/taskd"

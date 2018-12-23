@@ -1,5 +1,4 @@
 FROM alpine:latest
-MAINTAINER Andreas Rammhold (andreas@rammhold.de)
 
 # Install necessary stuff
 RUN apk -U --no-progress upgrade && \
@@ -11,6 +10,9 @@ COPY docker /app/taskd/
 # Set the data location
 ARG TASKDDATA
 ENV TASKDDATA ${TASKDDATA:-/var/taskd}
+
+# testing moving to docker-compose file
+#ENV CERTHOST='briankoopman.net'
 
 # Configure container
 VOLUME ["${TASKDDATA}"]
