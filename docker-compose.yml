@@ -1,7 +1,7 @@
 version: '3'
 services:
   taskd:
-    image: taskd
+    image: brianjkoopman/taskd
     restart: always
     ports:
       - 53589:53589
