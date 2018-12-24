@@ -7,6 +7,10 @@ efficient, and unobtrusive. It does its job then gets out of your way.
 This container packages **taskd**, the Taskwarrior sync server, under [Alpine
 Linux](https://alpinelinux.org/), a lightweight Linux distribution.
 
+The Alpine packages included are:
+* [taskd](https://pkgs.alpinelinux.org/package/v3.3/main/x86/taskd)
+* [taskd-pki](https://pkgs.alpinelinux.org/package/edge/main/x86/taskd-pki)
+
 This repo contains both the `Dockerfile` for building your own image and a
 `docker-compose.yml` for running the taskd service using an image pulled from
 [Docker Hub](https://hub.docker.com/r/brianjkoopman/taskd).
